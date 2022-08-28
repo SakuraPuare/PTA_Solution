@@ -6,6 +6,8 @@
 
 如需要更多内容，请访问[书樱寄语](https://sakurapuare.com/)
 
+本Repo提供答案均为AC，无warning。
+
 ## 题目列表
 
 对应题库名称 - 对于文件夹名称

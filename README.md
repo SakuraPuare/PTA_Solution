@@ -12,6 +12,7 @@
 
 对应题库名称 - 对于文件夹名称
 
+- [2022计算机科学与编程导论期末练习题](https://pintia.cn/problem-sets/1599335985970937856) - Introduction_to_CS_&_Programming
 - [浙大版《C语言程序设计（第4版）》题目集](https://pintia.cn/problem-sets/1298273728383766528) - C_Program_Design
 - 快乐学C - Happily_Learn_C
   - [2022-快乐学C-第00章-预备（请一定从此题目集开始，按顺序学习）](https://pintia.cn/problem-sets/1560592667300913152)

@@ -8,7 +8,7 @@ int main()
     // 如果能构成三角形
     if (a + b > c && a + c > b && b + c > a)
     {
-        double area = sqrt(1.0 * (a + b + c) * (a + b - c) * (a + c - b) * (b + c - a)) / 4;
+        double area = sqrt((a + b + c) * (a + b - c) * (a + c - b) * (b + c - a)) / 4;
         double perimeter = a + b + c;
         printf("area = %.2f; perimeter = %.2f", area, perimeter);
     }

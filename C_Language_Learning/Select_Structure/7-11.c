@@ -24,7 +24,15 @@ int main()
     for (int i = 0; i < n; i++)
     {
         int a, b, c, d, e, f;
-        scanf("%1d%1d%1d%1d%1d%1d", &a, &b, &c, &d, &e, &f);
+        int x ;
+        scanf("%d", &x);
+        a = x / 100000;
+        b = x / 10000 % 10;
+        c = x / 1000 % 10;
+        d = x / 100 % 10;
+        e = x / 10 % 10;
+        f = x % 10;
+        // scanf("%1d%1d%1d%1d%1d%1d", &a, &b, &c, &d, &e, &f);
         if (a + b + c == d + e + f)
             printf("You are lucky!\n");
         else

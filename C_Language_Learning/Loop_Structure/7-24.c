@@ -25,8 +25,6 @@ int main()
     {
         int n, cnt = 0;
         scanf("%d", &n);
-        if (n < 6)
-            puts("0");
 
         for (int i = 2; i <= n - 3; i++)
             for (int j = 2; j <= n - i; j++)

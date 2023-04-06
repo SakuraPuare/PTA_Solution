@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <math.h>
 
+int nums[100000];
+
 int is_prime(long num)
 {
     if (num == 2)
@@ -12,7 +14,7 @@ int is_prime(long num)
     }
     return 1;
 }
-int nums[100000];
+
 int main()
 {
     long n;

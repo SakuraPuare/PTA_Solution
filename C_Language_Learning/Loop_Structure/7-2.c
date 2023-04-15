@@ -1,10 +1,11 @@
 #include <stdio.h>
 
+int nums[2000];
+
 int main()
 {
     int t;
     scanf("%d", &t);
-    int nums[2000];
     for (int i = 0; i < t; i++)
     {
         int a, b, p = 0;

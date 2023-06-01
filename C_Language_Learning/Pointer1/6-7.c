@@ -10,6 +10,7 @@ void setByte(unsigned int *ip, int index, unsigned char value)
 {
     unsigned char *p = (unsigned char *)ip;
     p[index] = value;
+    // *(p + index) = value;
 }
 
 int main()

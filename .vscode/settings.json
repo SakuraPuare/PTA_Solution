@@ -41,6 +41,18 @@
         "xstddef": "cpp",
         "xstring": "cpp",
         "xtr1common": "cpp",
-        "xutility": "cpp"
-    }
+        "xutility": "cpp",
+        "string": "cpp",
+        "regex": "cpp",
+        "stdio.h": "c",
+        "math.h": "c",
+        "vector": "cpp",
+        "algorithm": "cpp",
+        "string.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "disabled",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.autopep8"
+    },
+    "python.formatting.provider": "none"
 }

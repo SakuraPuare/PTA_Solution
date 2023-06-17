@@ -1,4 +1,18 @@
-#include "stdio.h"
+#include <stdio.h>
+void fun(char s[], int b[]);
+int main()
+{
+    char s1[80];
+    int a[4] = {0};
+    int k;
+    gets(s1);
+    fun(s1, a);
+    for (k = 0; k < 4; k++)
+        printf("%4d", a[k]);
+    return 0;
+}
+
+/* 请在这里填写答案 */ 
 void fun(char s[], int b[])
 {
     b[0] = b[1] = b[2] = b[3] = 0;
@@ -14,16 +28,4 @@ void fun(char s[], int b[])
         else
             b[3]++;
     }
-}
-
-int main()
-{
-    char s1[80];
-    int a[4] = {0};
-    int k;
-    gets(s1);
-    fun(s1, a);
-    for (k = 0; k < 4; k++)
-        printf("%4d", a[k]);
-    return 0;
 }

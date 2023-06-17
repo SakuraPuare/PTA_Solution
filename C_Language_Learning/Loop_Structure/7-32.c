@@ -1,14 +1,4 @@
 #include <stdio.h>
-
-int a(int x)
-{
-    int t = b(x, 2);
-    for(int i = 3; i <= 9; i++)
-        if (t != b(x, i))
-            return 0;
-    return t;
-}
-
 int b(int x, int i)
 {
     int sum = 0;
@@ -16,6 +6,15 @@ int b(int x, int i)
     while (t)
         sum += t % 10, t /= 10;
     return sum;
+}
+
+int a(int x)
+{
+    int t = b(x, 2);
+    for (int i = 3; i <= 9; i++)
+        if (t != b(x, i))
+            return 0;
+    return t;
 }
 
 int main()

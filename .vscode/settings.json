@@ -48,7 +48,17 @@
         "math.h": "c",
         "vector": "cpp",
         "algorithm": "cpp",
-        "string.h": "c"
+        "string.h": "c",
+        "deque": "c",
+        "locale": "c",
+        "optional": "c",
+        "ranges": "c",
+        "span": "c",
+        "stack": "c",
+        "xlocbuf": "c",
+        "xlocmes": "c",
+        "xlocmon": "c",
+        "xloctime": "c"
     },
     "C_Cpp.errorSquiggles": "disabled",
     "[python]": {

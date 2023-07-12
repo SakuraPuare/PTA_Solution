@@ -1,11 +1,15 @@
 // ==UserScript==
 // @name         PTA 复制题目描述为 Markdown 格式
+// @namespace    https://github.com/SakuraPuare/PTA_Solution
 // @version      0.1
 // @description  PTA 复制题目描述为 Markdown 格式
 // @author       SakuraPuare
 // @match        https://pintia.cn/problem-sets/*/exam/problems/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=pintia.cn
 // @grant        GM_setClipboard
+// @run-at       document-end
+// @license 	 MIT
+// ==/UserScript==
 
 (function () {
     'use strict';

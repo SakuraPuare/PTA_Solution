@@ -94,8 +94,8 @@
         // 设置按钮class
         button.setAttribute('class', 'pc-button py-2 px-4 bg-bg-base pc-button-text pc-sm pc-active-light cursor-pointer');
         button.style.marginLeft = '10px';
-
-        const selector = '#exam-app > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div > div:nth-child(1) > div:nth-child(1) > div > div:nth-child(1)';
+        // #exam-app > div.flex.flex-col-reverse.justify-end.bg-bg-base.min-h-screen.\[--height-exclude-header\:calc\(100vh-var\(--height-header\)\)\].\[--height-header\:3\.5rem\] > div.pc-h.sbLayout_cMOTx.flex-row-reverse.bg-bg-base.sidebarOpen_AjZCi > div.mn_vUOrB.transition-all > div > div.pc-v.md\:mx-0.md\:\!mt-0.\[--height-problem-detail\:var\(--height-exclude-header\)\].md\:h-\[var\(--height-problem-detail\)\] > div.flex-1.splitArea_DF4tO > div.left_rtQmv > div > div.flex.bg-bg-light.flex-none
+        const selector = '#exam-app > div > div.pc-h > div > div > div.pc-v > div > div > div > div';
         var targetElement = document.querySelector(selector);
         if (targetElement) {
             targetElement.appendChild(button);

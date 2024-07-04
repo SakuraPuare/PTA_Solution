@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         PTA 复制题目描述为 Markdown 格式
 // @namespace    https://github.com/SakuraPuare/PTA_Solution
-// @version      0.1
+// @version      0.2
 // @description  PTA 复制题目描述为 Markdown 格式
 // @author       SakuraPuare
 // @match        https://pintia.cn/problem-sets/*/exam/problems/*
@@ -52,15 +52,14 @@
 
         const url = document.URL;
 
-        // https://pintia.cn/problem-sets/*/exam/problems/*
-        const re = /https:\/\/pintia.cn\/problem-sets\/(\d+)\/exam\/problems\/(\d+)/;
-        const match = url.match(re);
-        const problem_set_id = match[1];
-        const problem_id = match[2];
+        // https://pintia.cn/problem-sets/1767419859015790592/exam/problems/type/7?problemSetProblemId=1767420176117731334&page=0
+        const problem_set_id = url.match(/problem-sets\/(\d+)/)[1];
+        const problem_set_problem_id = url.match(/problemSetProblemId=(\d+)/)[1];
 
         // api
-        // https://pintia.cn/api/problem-sets/*/exam-problems/*
-        const api = `https://pintia.cn/api/problem-sets/${problem_set_id}/exam-problems/${problem_id}`;
+        // https://pintia.cn/api/problem-sets/1767419859015790592/exam-problems/1767420176117731334
+        const api = `https://pintia.cn/api/problem-sets/${problem_set_id}/exam-problems/${problem_set_problem_id}`;
+
         // cookies
         const cookies = document.cookie;
         fetch(api, {
@@ -77,43 +76,11 @@
             })
     }
 
-    function addbutton() {
-        // 检查是否已经添加过按钮
-        if (document.getElementById('copy-button')) {
-            return;
-        }
-
-        // debugger;
-        var button = document.createElement('button');
-        button.id = 'copy-button';
-        button.innerHTML = '复制题目';
-        button.addEventListener('click', function () {
+    // listen for the `
+    document.addEventListener('keydown', function (e) {
+        if (e.key === '`') {
             getContent();
-            console.log('复制成功');
-        });
-        // 设置按钮class
-        button.setAttribute('class', 'pc-button py-2 px-4 bg-bg-base pc-button-text pc-sm pc-active-light cursor-pointer');
-        button.style.marginLeft = '10px';
-        // #exam-app > div.flex.flex-col-reverse.justify-end.bg-bg-base.min-h-screen.\[--height-exclude-header\:calc\(100vh-var\(--height-header\)\)\].\[--height-header\:3\.5rem\] > div.pc-h.sbLayout_cMOTx.flex-row-reverse.bg-bg-base.sidebarOpen_AjZCi > div.mn_vUOrB.transition-all > div > div.pc-v.md\:mx-0.md\:\!mt-0.\[--height-problem-detail\:var\(--height-exclude-header\)\].md\:h-\[var\(--height-problem-detail\)\] > div.flex-1.splitArea_DF4tO > div.left_rtQmv > div > div.flex.bg-bg-light.flex-none
-        const selector = '#exam-app > div > div.pc-h > div > div > div.pc-v > div > div > div > div';
-        var targetElement = document.querySelector(selector);
-        if (targetElement) {
-            targetElement.appendChild(button);
-        }
-        else {
-            console.error('targetElement not found.');
-        }
-    }
-
-    var observer = new MutationObserver(function (mutations) {
-        for (let mutation of mutations) {
-            // console.log(mutation);
-            if (mutation.target.innerText.startsWith('题目')) {
-                // observer.disconnect();
-                addbutton();
-            }
         }
     });
 
-    observer.observe(document.body, { childList: true, subtree: true });
 })();
